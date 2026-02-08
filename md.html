@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ON-STARTER · MD/PD 콘솔</title>
+
+  <!-- ✅ 반드시 이 경로 -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="md-layout">
+  <!-- SIDEBAR -->
+  <aside class="md-sidebar">
+    <div class="md-brand">
+      <!-- ✅ 로고 이미지 다시 사용 -->
+      <img class="md-brand-logo" src="assets/img/logo.png" alt="ON-STARTER 로고" />
+      <div class="md-brand-sub">MD / PD 콘솔</div>
+    </div>
+
+    <nav class="md-nav" aria-label="MD Navigation">
+      <a class="active" href="md.html">📋 신청 현황</a>
+      <a href="javascript:void(0)">🧠 AI 진단 요약</a>
+      <a href="javascript:void(0)">🎬 기획안 보드</a>
+      <a href="javascript:void(0)">📦 물류 / 대한통운</a>
+      <a href="javascript:void(0)">⚙️ 설정</a>
+      <a href="index.html">🏠 홈으로</a>
+    </nav>
+
+    <div class="md-sidecard">
+      <div class="md-sidecard-title">오늘의 운영 체크</div>
+      <ul class="md-sidecard-list">
+        <li>AI는 “심사”가 아니라 <b>보완 가이드</b>입니다.</li>
+        <li>NEW는 <b>준비도 높은 순</b>으로 먼저 검토하세요.</li>
+        <li>통과 처리 시 <b>기획 초안</b>이 자동 생성됩니다(가정).</li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="md-main">
+    <header class="md-header">
+      <div>
+        <h1>신청 현황 대시보드</h1>
+        <p>소상공인 신청을 한눈에 확인하고 AI 준비도 진단을 기반으로 기획/보완 가이드를 제공합니다.</p>
+      </div>
+
+      <div class="md-header-actions">
+        <button class="md-btn md-btn-outline" type="button">내보내기</button>
+        <button class="md-btn md-btn-primary" type="button">+ 신규 신청(데모)</button>
+      </div>
+    </header>
+
+    <!-- KPI -->
+    <section class="md-kpis" aria-label="KPI">
+      <div class="md-kpi">
+        <div class="k">신규 신청</div>
+        <div class="v">12</div>
+      </div>
+      <div class="md-kpi">
+        <div class="k">검토 중</div>
+        <div class="v">5</div>
+      </div>
+      <div class="md-kpi">
+        <div class="k">통과</div>
+        <div class="v">3</div>
+      </div>
+      <div class="md-kpi">
+        <div class="k">보완 요청</div>
+        <div class="v">4</div>
+      </div>
+    </section>
+
+    <!-- LIST -->
+<section class="md-list" aria-label="Applications">
+
+  <!-- 카드 1 -->
+  <article class="md-card">
+    <div class="md-card-top">
+      <div class="md-card-title">
+        <h3>하루한번 스튜디오 · 초미니 접이식 미니가습기</h3>
+        <p>카테고리: 리빙/소형가전 · 신청번호 ST-2026-021 · 2026-02-08 11:12</p>
+      </div>
+      <span class="md-badge md-badge-new">NEW</span>
+    </div>
+
+    <div class="md-ai">
+      <div class="md-ai-row">
+        <b>AI 준비도</b> <span>74/100</span>
+      </div>
+      <div class="md-progress" aria-label="Readiness bar"><div style="width:74%"></div></div>
+      <p class="md-ai-text">
+        니치 포인트는 명확하나 상세페이지 정보(AS, 용량, 소음) 누락으로 신뢰 리스크가 있습니다.
+        숏폼 2편(사용 전/후·소음 테스트) 우선 후, 라이브 10분 Q&amp;A를 추천합니다.
+      </p>
+    </div>
+
+    <div class="md-card-actions">
+      <button class="md-btn md-btn-outline" type="button">기획안 보기</button>
+      <button class="md-btn md-btn-primary" type="button">검토</button>
+      <button class="md-btn md-btn-danger" type="button">반려</button>
+    </div>
+  </article>
+
+  <!-- 카드 2 -->
+  <article class="md-card">
+    <div class="md-card-top">
+      <div class="md-card-title">
+        <h3>모노랩(1인공방) · 재활용 원단 미니 파우치 (한정 컬러)</h3>
+        <p>카테고리: 패션/잡화 · 신청번호 ST-2026-020 · 2026-02-08 10:02</p>
+      </div>
+      <span class="md-badge">REVIEW</span>
+    </div>
+
+    <div class="md-ai">
+      <div class="md-ai-row">
+        <b>AI 준비도</b> <span>62/100</span>
+      </div>
+      <div class="md-progress" aria-label="Readiness bar"><div style="width:62%"></div></div>
+      <p class="md-ai-text">
+        스토리성은 좋지만 “왜 이 가격인지” 설득이 약합니다.
+        단품보다 세트(파우치+키링/스트랩) 구성으로 체감 가치를 올리는 방향을 추천합니다.
+      </p>
+    </div>
+
+    <div class="md-card-actions">
+      <button class="md-btn md-btn-outline" type="button">기획안 보기</button>
+      <button class="md-btn md-btn-primary" type="button">검토</button>
+      <button class="md-btn md-btn-danger" type="button">반려</button>
+    </div>
+  </article>
+
+  <!-- 카드 3 -->
+  <article class="md-card">
+    <div class="md-card-top">
+      <div class="md-card-title">
+        <h3>키친노트 · 1인분 밀프렙 유리용기 세트</h3>
+        <p>카테고리: 푸드/키친 · 신청번호 ST-2026-019 · 2026-02-07 18:44</p>
+      </div>
+      <span class="md-badge">APPROVED</span>
+    </div>
+
+    <div class="md-ai">
+      <div class="md-ai-row">
+        <b>AI 준비도</b> <span>81/100</span>
+      </div>
+      <div class="md-progress" aria-label="Readiness bar"><div style="width:81%"></div></div>
+      <p class="md-ai-text">
+        온스타일 시청층(1~2인 가구)과 핏이 좋고, 데모가 강한 상품입니다.
+        라이브에서 “냉장→전자레인지→세척” 실사용 시연을 메인으로 구성하면 전환이 높습니다.
+      </p>
+    </div>
+
+    <div class="md-card-actions">
+      <button class="md-btn md-btn-outline" type="button">기획안 보기</button>
+      <button class="md-btn md-btn-primary" type="button">검토</button>
+      <button class="md-btn md-btn-danger" type="button">반려</button>
+    </div>
+  </article>
+
+  <!-- 카드 4 -->
+  <article class="md-card">
+    <div class="md-card-top">
+      <div class="md-card-title">
+        <h3>스킨레시피 · 저자극 클렌징바(2종)</h3>
+        <p>카테고리: 뷰티 · 신청번호 ST-2026-018 · 2026-02-07 13:08</p>
+      </div>
+      <span class="md-badge">NEEDS FIX</span>
+    </div>
+
+    <div class="md-ai">
+      <div class="md-ai-row">
+        <b>AI 준비도</b> <span>48/100</span>
+      </div>
+      <div class="md-progress" aria-label="Readiness bar"><div style="width:48%"></div></div>
+      <p class="md-ai-text">
+        전성분/시험성적서/인증 등 근거 자료가 부족해 신뢰 확보가 어렵습니다.
+        “보완 후 재도전” 루트로 운영: 자료 업로드 체크리스트를 먼저 안내하는 것이 안전합니다.
+      </p>
+    </div>
+
+    <div class="md-card-actions">
+      <button class="md-btn md-btn-outline" type="button">기획안 보기</button>
+      <button class="md-btn md-btn-primary" type="button">검토</button>
+      <button class="md-btn md-btn-danger" type="button">반려</button>
+    </div>
+  </article>
+
+  <!-- 카드 5 -->
+  <article class="md-card">
+    <div class="md-card-top">
+      <div class="md-card-title">
+        <h3>글로우메이드 · 초소형 무선 조명(책상/캠핑 겸용)</h3>
+        <p>카테고리: 리빙/캠핑 · 신청번호 ST-2026-017 · 2026-02-07 09:21</p>
+      </div>
+      <span class="md-badge md-badge-new">NEW</span>
+    </div>
+
+    <div class="md-ai">
+      <div class="md-ai-row">
+        <b>AI 준비도</b> <span>68/100</span>
+      </div>
+      <div class="md-progress" aria-label="Readiness bar"><div style="width:68%"></div></div>
+      <p class="md-ai-text">
+        사용 장면(책상/침대/캠핑) 컷이 더 많으면 전환이 좋아집니다.
+        숏폼은 “밝기 단계/배터리 시간”을 자막으로 정리하고, 라이브는 비교 데모 중심으로 구성 추천.
+      </p>
+    </div>
+
+    <div class="md-card-actions">
+      <button class="md-btn md-btn-outline" type="button">기획안 보기</button>
+      <button class="md-btn md-btn-primary" type="button">검토</button>
+      <button class="md-btn md-btn-danger" type="button">반려</button>
+    </div>
+  </article>
+
+</section>
+
+  </main>
+</body>
+</html>

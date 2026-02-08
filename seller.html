@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ON-STARTER · 소상공인 포털</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="md-layout">
+
+  <!-- SIDEBAR (MD와 유사 톤) -->
+  <aside class="md-sidebar">
+    <div class="md-brand">
+      <img class="md-brand-logo" src="assets/img/logo.png" alt="ON-STARTER 로고" />
+      <div class="md-brand-sub">소상공인 포털</div>
+    </div>
+
+    <nav class="md-nav" aria-label="Seller Navigation">
+      <a class="active" href="seller.html">📝 신청서 작성</a>
+      <a href="javascript:void(0)">📦 배송/정산 안내</a>
+      <a href="javascript:void(0)">🧾 제출 내역</a>
+      <a href="javascript:void(0)">💬 문의/채팅</a>
+      <a href="index.html">🏠 홈으로</a>
+    </nav>
+
+    <div class="md-sidecard">
+      <div class="md-sidecard-title">제출 전 체크</div>
+      <ul class="md-sidecard-list">
+        <li>대표 이미지 1장 + 상세/사용컷 2장 권장</li>
+        <li><b>AS/스펙/구성</b> 정보가 누락되면 보완 요청이 발생할 수 있어요</li>
+        <li>AI는 “탈락”이 아니라 <b>보완 가이드</b>를 제공합니다</li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="md-main">
+    <header class="md-header">
+      <div>
+        <h1>ON-STARTER 신청서</h1>
+        <p>
+          상품 정보와 이미지를 제출하면 AI가 준비도 진단/보완 체크리스트/콘텐츠 기획 초안을 생성합니다.
+          최종 편성은 MD/PD가 검토 후 확정합니다.
+        </p>
+      </div>
+      <div class="md-header-actions">
+        <button class="md-btn md-btn-outline" type="button" onclick="location.href='index.html'">나가기</button>
+        <button class="md-btn md-btn-primary" type="button" id="btnSubmit">제출(데모)</button>
+      </div>
+    </header>
+
+    <!-- FORM CARD -->
+    <section class="md-list" aria-label="Application Form">
+      <article class="md-card">
+        <div class="md-card-top" style="margin-bottom:10px;">
+          <div class="md-card-title">
+            <h3>기본 정보</h3>
+            <p>브랜드와 담당자 정보를 입력해 주세요.</p>
+          </div>
+          <span class="md-badge">STEP 1</span>
+        </div>
+
+        <div class="seller-grid">
+          <div class="seller-field">
+            <label>브랜드명</label>
+            <input type="text" placeholder="예: 하루한번 스튜디오" />
+          </div>
+          <div class="seller-field">
+            <label>담당자 이름</label>
+            <input type="text" placeholder="예: 김세희" />
+          </div>
+          <div class="seller-field">
+            <label>연락처</label>
+            <input type="text" placeholder="예: 010-1234-5678" />
+          </div>
+          <div class="seller-field">
+            <label>이메일</label>
+            <input type="email" placeholder="예: contact@brand.com" />
+          </div>
+        </div>
+      </article>
+
+      <article class="md-card">
+        <div class="md-card-top" style="margin-bottom:10px;">
+          <div class="md-card-title">
+            <h3>상품 정보</h3>
+            <p>AI 진단과 기획 초안 생성에 사용됩니다.</p>
+          </div>
+          <span class="md-badge">STEP 2</span>
+        </div>
+
+        <div class="seller-grid">
+          <div class="seller-field seller-wide">
+            <label>상품명</label>
+            <input type="text" placeholder="예: 초미니 접이식 미니가습기" />
+          </div>
+
+          <div class="seller-field">
+            <label>카테고리</label>
+            <select>
+              <option>리빙/소형가전</option>
+              <option>패션/잡화</option>
+              <option>푸드/키친</option>
+              <option>뷰티</option>
+              <option>기타</option>
+            </select>
+          </div>
+
+          <div class="seller-field">
+            <label>판매가(원)</label>
+            <input type="number" placeholder="예: 29000" />
+          </div>
+
+          <div class="seller-field">
+            <label>재고/생산 가능 수량(월)</label>
+            <input type="number" placeholder="예: 200" />
+          </div>
+
+          <div class="seller-field seller-wide">
+            <label>한 줄 핵심 메시지</label>
+            <input type="text" placeholder="예: 책상 위 10cm, 하루한번 켜는 미니 가습 루틴" />
+          </div>
+
+          <div class="seller-field seller-wide">
+            <label>상세 설명(누가/언제/왜 필요한지)</label>
+            <textarea placeholder="예: 원룸/사무실 책상에서 건조함을 느끼는 1~2인 가구를 위한 초소형 가습기입니다. 소음이 낮고 접이식이라 휴대가 쉬워요."></textarea>
+          </div>
+
+          <div class="seller-field seller-wide">
+            <label>스펙/구성/AS 정보</label>
+            <textarea placeholder="예: 용량 250ml / 소음 25dB / 구성: 본체+USB케이블 / AS: 1년 무상 / KC 인증번호 등"></textarea>
+          </div>
+        </div>
+      </article>
+
+      <article class="md-card">
+        <div class="md-card-top" style="margin-bottom:10px;">
+          <div class="md-card-title">
+            <h3>상품 이미지 업로드</h3>
+            <p>대표 1장 + 상세/사용 장면 2장 이상 권장 (데모는 업로드 UI만)</p>
+          </div>
+          <span class="md-badge">STEP 3</span>
+        </div>
+
+        <div class="seller-upload">
+          <div class="seller-drop">
+            <div class="seller-drop-title">대표 이미지</div>
+            <div class="seller-drop-sub">드래그&드롭 또는 클릭</div>
+            <input type="file" accept="image/*" />
+          </div>
+
+          <div class="seller-drop">
+            <div class="seller-drop-title">상세/구성 이미지</div>
+            <div class="seller-drop-sub">드래그&드롭 또는 클릭</div>
+            <input type="file" accept="image/*" multiple />
+          </div>
+
+          <div class="seller-drop">
+            <div class="seller-drop-title">사용 장면 이미지</div>
+            <div class="seller-drop-sub">드래그&드롭 또는 클릭</div>
+            <input type="file" accept="image/*" multiple />
+          </div>
+        </div>
+
+        <div class="seller-hint">
+          * 이미지가 부족하면 AI가 “보완 요청 체크리스트”를 먼저 제안할 수 있어요.
+        </div>
+      </article>
+
+      <article class="md-card">
+        <div class="md-card-top" style="margin-bottom:10px;">
+          <div class="md-card-title">
+            <h3>동의 및 제출</h3>
+            <p>제출 후에는 AI 진단 결과가 생성되고, MD/PD가 검토를 시작합니다.</p>
+          </div>
+          <span class="md-badge">STEP 4</span>
+        </div>
+
+        <div class="seller-checks">
+          <label class="seller-check">
+            <input type="checkbox" />
+            (필수) 제공한 정보가 사실이며, 허위 기재 시 편성이 제한될 수 있음을 확인했습니다.
+          </label>
+          <label class="seller-check">
+            <input type="checkbox" />
+            (필수) 이미지/문구 사용 및 콘텐츠 제작을 위한 활용에 동의합니다.
+          </label>
+          <label class="seller-check">
+            <input type="checkbox" />
+            (선택) AI가 생성한 기획 초안을 편집하여 콘텐츠로 활용하는 것에 동의합니다.
+          </label>
+        </div>
+
+        <div class="md-card-actions" style="margin-top:14px;">
+          <button class="md-btn md-btn-outline" type="button" id="btnSaveDraft">임시저장(데모)</button>
+          <button class="md-btn md-btn-primary" type="button" id="btnSubmitBottom">제출(데모)</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    const toast = (msg) => {
+      alert(msg);
+    };
+
+    document.getElementById("btnSubmit")?.addEventListener("click", () => {
+      toast("제출(데모): 실제 구현에서는 이미지→Vision, 텍스트+결과→LLM으로 준비도/가이드/기획 초안을 생성합니다.");
+    });
+
+    document.getElementById("btnSubmitBottom")?.addEventListener("click", () => {
+      toast("제출 완료(데모)! MD/PD 검토 상태로 넘어간다고 가정합니다.");
+    });
+
+    document.getElementById("btnSaveDraft")?.addEventListener("click", () => {
+      toast("임시저장(데모): 입력값을 LocalStorage 또는 DB에 저장하는 흐름으로 연결 가능합니다.");
+    });
+  </script>
+
+  <!-- ✅ seller 전용 스타일: 기존 style.css에 없으면 아래를 style.css에 추가해도 되고,
+       지금은 페이지 내에서 빠르게 보이도록 최소한만 inline으로 넣어둠(원하면 style.css로 분리해줄게) -->
+  <style>
+    .seller-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap:12px;
+      margin-top: 10px;
+    }
+    .seller-wide{ grid-column: 1 / -1; }
+
+    .seller-field label{
+      display:block;
+      font-size:12px;
+      font-weight: 900;
+      color:#374151;
+      margin-bottom: 8px;
+    }
+    .seller-field input,
+    .seller-field select,
+    .seller-field textarea{
+      width:100%;
+      border:1px solid rgba(17,24,39,.12);
+      border-radius: 12px;
+      padding: 10px 10px;
+      font-size:13px;
+      outline:0;
+      background:#fff;
+      color:#111827;
+    }
+    .seller-field textarea{
+      min-height: 92px;
+      resize: vertical;
+      line-height: 1.55;
+    }
+
+    .seller-upload{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap:12px;
+      margin-top: 10px;
+    }
+    .seller-drop{
+      border:1px dashed rgba(75,31,184,.35);
+      border-radius: 16px;
+      padding: 14px 12px;
+      background: #fafafe;
+      position:relative;
+      overflow:hidden;
+      min-height: 120px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      text-align:center;
+    }
+    .seller-drop input[type="file"]{
+      position:absolute;
+      inset:0;
+      opacity:0;
+      cursor:pointer;
+    }
+    .seller-drop-title{
+      font-weight: 950;
+      color:#111827;
+      font-size: 13px;
+    }
+    .seller-drop-sub{
+      margin-top: 6px;
+      font-size: 12px;
+      color:#6B7280;
+    }
+    .seller-hint{
+      margin-top: 10px;
+      font-size:12px;
+      color:#6B7280;
+    }
+
+    .seller-checks{
+      display:grid;
+      gap:10px;
+      margin-top: 10px;
+      color:#374151;
+      font-size:13px;
+      line-height: 1.5;
+    }
+    .seller-check{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+    .seller-check input{
+      margin-top: 3px;
+    }
+
+    @media (max-width: 980px){
+      .seller-grid{ grid-template-columns: 1fr; }
+      .seller-upload{ grid-template-columns: 1fr; }
+    }
+  </style>
+
+</body>
+</html>
